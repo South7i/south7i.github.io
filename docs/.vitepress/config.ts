@@ -111,19 +111,18 @@ function courseSidebar() {
       items: [
         {
           text: '5分钟开发环境搭建',
-          link: '/guide/api/start'
+          link: '/doc/course/quickEnv'
         }, {
           text: 'Git配置/常用命令',
-          link: '/guide/api/oauth'
+          link: '/doc/course/git'
         },
         {
           text: 'Node Version Manager',
-          link: '/guide/api/space-resource'
-        }
-        ,
+          link: '/doc/course/nvm'
+        },
         {
-          text: 'IDEA配置推荐',
-          link: '/guide/api/quick-card'
+          text: 'IDEA配置/插件推荐',
+          link: '/doc/course/idea'
         }
       ]
     },
