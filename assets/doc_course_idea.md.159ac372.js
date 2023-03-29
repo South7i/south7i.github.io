@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.95425a55.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"doc/course/idea.md","lastUpdated":1679677136000}'),o={name:"doc/course/idea.md"};function r(c,s,d,n,i,p){return a(),t("div")}const f=e(o,[["render",r]]);export{m as __pageData,f as default};
