@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.86af3dd7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"doc/env/idea.md","lastUpdated":1680366695000}'),o={name:"doc/env/idea.md"};function r(c,n,s,d,i,p){return a(),t("div")}const f=e(o,[["render",r]]);export{m as __pageData,f as default};
