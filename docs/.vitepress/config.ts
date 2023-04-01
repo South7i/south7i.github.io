@@ -2,74 +2,34 @@ import { defineConfig, DefaultTheme } from 'vitepress'
 
 const nav = [
   {
-    text: '📝 笔记',
+    text: '📝 Doc',
     items: [
       {
-        items: [{ text: "🦊 技术教程", link: "/doc/course/scoop" }],
-      },
-      {
-        items: [{ text: "🎉 项目笔记", link: "/doc/project/" }],
+        items: [{ text: "🦊 学习记录", link: "/doc/study/" }],
       },
       {
         items: [{ text: "🐛 BUG笔记", link: "/doc/bug/" }],
+      },
+      {
+        items: [{ text: "💻 Env", link: "/doc/env/scoop" }],
       },
     ],
     activeMatch: '/doc/'
   },
   {
-    text: '🎨 前端',
+    text: '✍️ Prog',
     items: [
-      { text: "🔰 VUE", link: "/web/vue" },
-      { text: "✡️ REACT", link: "/web/react" },
-      { text: "🛫 Flutter", link: "/web/flutter" },
-      { text: "🟦 Ts", link: "/web/ts" },
-      { text: "🟨 Js", link: "/web/js" },
+      { text: "💻 后端", link: "/prog/server/java" },
+      { text: "🎨 前端", link: "/prog/web/vue" },
+      { text: "🐋 Sql", link: "/prog/sql/mysql" },
+      { text: "📢 MQ", link: "/prog//mq/active" },
+      { text: "🌏 DevOps", link: "/prog/dev/linux" },
     ],
-    activeMatch: '/web/'
+    activeMatch: '/prog/'
   },
-  {
-    text: '💻 后端',
-    items: [
-      { text: "☕ Java", link: "/server/java" },
-      { text: "✅ Go", link: "/server/go" },
-      { text: "☘️ Node", link: "/server/node" },
-      { text: "✝️ Python", link: "/server/python" },
-    ],
-    activeMatch: '/server/'
-  },
-  {
-    text: '🐋 Sql',
-    items: [
-      { text: "🐬 MySql", link: "/sql/mysql/" },
-      { text: "🍃 MongoDb", link: "/sql/mongodb" },
-      { text: "🏮 Redis", link: "/sql/redis" },
-      { text: "🔍️ Elasticsearch", link: "/sql/es" },
-    ],
-    activeMatch: '/sql/'
-  },
-  {
-    text: '📢 MQ',
-    items: [
-      { text: "🎠 ActiveMq", link: "/mq/active" },
-      { text: "🐇 RabbitMq", link: "/mq/rabbit" },
-      { text: "🚀 RocketMQ", link: "/mq/rocket" },
-      { text: "🔱 Kafka", link: "/mq/kafka" },
-    ],
-    activeMatch: '/mq/'
-  },
-  {
-    text: '🌏 DevOps',
-    items: [
-      { text: "🐧 Linux", link: "/dev/linux" },
-      { text: "🐈 Git", link: "/dev/git" },
-      { text: "📗 Nginx", link: "/dev/nginx" },
-      { text: "🐋 Docker", link: "/dev/docker" },
-      { text: "👴 Jenkins", link: "/dev/jenkins" },
-      { text: "🎡 Kubernetes", link: "/dev/k8s" },
-    ],
-    activeMatch: '/dev/'
-  },
+  { text: "🎉 项目", link: "/project/wealth" },
   { text: '🍂 杂记', link: '/life/', activeMatch: '/life/' },
+  { text: '😶‍🌫️ 目标', link: '/goal/2023', activeMatch: '/goal/' },
 ]
 
 export default defineConfig({
@@ -87,7 +47,13 @@ export default defineConfig({
     //导航栏
     nav: nav,
     sidebar: {
-      '/doc/course/': courseSidebar(),
+      '/doc/env/': envSidebar(),
+      '/prog/server/': serverSidebar(),
+      '/prog/web/': webSidebar(),
+      '/prog/sql/': sqlSidebar(),
+      '/prog/mq/': mqSidebar(),
+      '/prog/dev/': devOpsSidebar(),
+      'goal': goalSidebar()
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/South7i" },
@@ -96,9 +62,14 @@ export default defineConfig({
       copyright: "Copyright © 2022-present Caleb",
     },
   },
+  markdown: {
+    config: (md) => {
+      md.use(require('markdown-it-task-checkbox'))
+    }
+  }
 })
 
-function courseSidebar() {
+function envSidebar() {
   return [
     {
       text: 'Windows',
@@ -126,6 +97,180 @@ function courseSidebar() {
         }
       ]
     },
+  ]
+}
+
+function serverSidebar() {
+  return [
+    {
+      text: '☕ Java',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '✅ Go',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '☘️ Node',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '✝️ Python',
+      items: [
+        { text: '', link: '' },
+      ]
+    }
+  ]
+}
+
+function webSidebar() {
+  return [
+    {
+      text: '🔰 VUE',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '✡️ REACT',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🛫 Flutter',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🟦 Ts',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🟨 Js',
+      items: [
+        { text: '', link: '' },
+      ]
+    }
+  ]
+}
+
+function sqlSidebar() {
+  return [
+    {
+      text: '🐬 MySql',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🍃 MongoDb',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🏮 Redis',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🔍️ Elasticsearch',
+      items: [
+        { text: '', link: '' },
+      ]
+    }
+  ]
+}
+
+function mqSidebar() {
+  return [
+    {
+      text: '🎠 ActiveMq',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🐇 RabbitMq',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🚀 RocketMQ',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🔱 Kafka',
+      items: [
+        { text: '', link: '' },
+      ]
+    }
+  ]
+}
+
+function devOpsSidebar() {
+  return [
+    {
+      text: '🐧 Linux',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🐈 Git',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '📗 Nginx',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🐋 Docker',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '👴 Jenkins',
+      items: [
+        { text: '', link: '' },
+      ]
+    },
+    {
+      text: '🎡 Kubernetes',
+      items: [
+        { text: '', link: '' },
+      ]
+    }
+  ]
+}
+
+function goalSidebar(){
+  return [
+    {
+      text: '🐌 年度目标',
+      items: [
+        { text: '2023', link: '/goal/2023' },
+      ]
+    }
   ]
 }
 

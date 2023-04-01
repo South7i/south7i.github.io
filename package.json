@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy":"bash deploy.sh", 
+    "deploy": "bash deploy.sh",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "markdown-it-task-checkbox": "^1.0.6",
     "vitepress": "1.0.0-alpha.49"
   },
   "devDependencies": {
