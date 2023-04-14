@@ -74,7 +74,7 @@ function envSidebar() {
     {
       text: 'Windows',
       items: [
-        { text: 'Scoop-Windows包管理', link: '/doc/course/scoop' },
+        { text: 'Scoop-Windows包管理', link: '/doc/env/scoop' },
       ]
     },
     {
@@ -82,18 +82,18 @@ function envSidebar() {
       items: [
         {
           text: '5分钟开发环境搭建',
-          link: '/doc/course/quickEnv'
+          link: '/doc/env/quickEnv'
         }, {
           text: 'Git配置/常用命令',
-          link: '/doc/course/git'
+          link: '/doc/env/git'
         },
         {
           text: 'Node Version Manager',
-          link: '/doc/course/nvm'
+          link: '/doc/env/nvm'
         },
         {
           text: 'IDEA配置/插件推荐',
-          link: '/doc/course/idea'
+          link: '/doc/env/idea'
         }
       ]
     },
