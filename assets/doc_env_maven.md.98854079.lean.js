@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.660b033a.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"doc/env/maven.md","lastUpdated":1681432072000}'),n={name:"doc/env/maven.md"};function o(r,c,s,d,p,m){return a(),t("div")}const f=e(n,[["render",o]]);export{i as __pageData,f as default};
